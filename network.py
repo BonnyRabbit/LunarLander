@@ -7,9 +7,9 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 class PolicyGradientNetwork(nn.Module):
     def __init__(self):
         super(PolicyGradientNetwork, self).__init__()
-        self.fc1 = nn.Linear(8,16)
-        self.fc2 = nn.Linear(16,16)
-        self.fc3 = nn.Linear(16,4)
+        self.fc1 = nn.Linear(8,256)
+        self.fc2 = nn.Linear(256,256)
+        self.fc3 = nn.Linear(256,4)
 
     def forward(self, state):
         hid = torch.tanh(self.fc1(state))

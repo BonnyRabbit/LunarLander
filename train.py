@@ -61,7 +61,7 @@ def main():
         rewards = (rewards - np.mean(rewards)) / (np.std(rewards + 1e-9))
         agent.learn(torch.stack(log_probs), torch.from_numpy(rewards))
 
-        if (batch+1) % 100 == 0:
+        if (batch+1) % 200 == 0:
             agent.save_models()
 
     plt.plot(avg_total_rewards)

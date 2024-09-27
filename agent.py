@@ -6,7 +6,7 @@ from network import PolicyGradientNetwork
 class PolicyGradientAgent:
     def __init__(self, ckpt_dir):
         self.network = PolicyGradientNetwork()
-        self.optimizer = optim.SGD(self.network.parameters(), lr=0.01)
+        self.optimizer = optim.SGD(self.network.parameters(), lr=0.001)
         self.checkpoint_dir = ckpt_dir
 
     def learn(self, log_probs, rewards):
