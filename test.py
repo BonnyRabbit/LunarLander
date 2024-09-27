@@ -1,6 +1,5 @@
 import imageio
 import argparse
-import torch
 import gym
 from agent import PolicyGradientAgent
 
